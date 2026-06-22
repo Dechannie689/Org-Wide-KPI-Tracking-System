@@ -39,7 +39,7 @@ The January 2026 snapshot shows a Manager-level Total Result YTD giving C level 
 
 The dashboard is used by HR managers and department heads to evaluate monthly KPI performance at the individual and role level. Each KPI card shows the fiscal year target, actual YTD value, result percentage, and KPI weight — making it easy to identify which metrics are dragging down an employee's overall score and to track month-over-month improvement.
 
-[View the full dashboard PDF](https://github.com/Dechannie689/KPI-TRACKING-SYSTEM/blob/main/KPI_DASHBOARD.pdf)
+[View the full dashboard PDF](https://github.com/Dechannie689/Org-Wide-KPI-Tracking-System/blob/main/KPI_DASHBOARD.pdf)
 
 ---
 
