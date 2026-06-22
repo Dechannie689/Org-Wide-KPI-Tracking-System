@@ -18,7 +18,7 @@ The January 2026 snapshot shows a Manager-level Total Result YTD giving C level 
 
 ## 🏗️ Architecture
 
-![](https://github.com/Dechannie689/Marketing-Analysis/blob/main/Marketing%20Analysis.png)
+![](https://github.com/Dechannie689/Org-Wide-KPI-Tracking-System/blob/main/KPI_WORKFLOW.png)
 
 ---
 
