@@ -1,18 +1,18 @@
 # Org-Wide-KPI-Tracking-System
 
-![](https://github.com/Dechannie689/Marketing-Analysis/blob/main/MARKETING%20DASHBOARD.png)
+![](https://github.com/Dechannie689/Org-Wide-KPI-Tracking-System/blob/main/KPI_DASHBOARD.png)
 
-End-to-end multi-channel marketing analytics pipeline built on Microsoft Fabric, unifying Instagram, Pinterest, YouTube, LinkedIn and Website data into a single Power BI reporting, covering audience demographics, traffic sources, and lead quality across 5 platforms.
+An automated KPI analysis system that consolidates employee, finance, ERP system and other manual tracking files into a weighted performance scorecard, giving managers and employee a real-time view of individual and team results against targets.
 
 ---
 
 ## 📌 Overview
 
-Marketing teams tracking performance across multiple social channels and a website with fragmented, manually-exported CSV files that are slow to consolidate. Understanding where high-quality leads come from, which platform drives the most engaged traffic, and how audience profiles differ by channel requires stitching together data that rarely lives in the same place.
+Organizations with distributed teams often lack a unified, consistent method to track employee KPI performance across departments. Manually compiling results from multiple Excel files and ERP exports each month was time-consuming and error-prone, making it difficult to identify underperformers or reward top contributors in time.
 
-This project automates the full pipeline: raw data from Instagram, Pinterest, YouTube, LinkedIn, and website sessions is ingested via Microsoft Fabric Pipelines and Dataflows, stored in a Bronze/Silver/Gold Lakehouse on OneLake, cleansed and validated through PySpark Notebooks, and modelled into a Semantic Model that powers a multi-page Power BI dashboard — refreshed automatically and filterable by date range and brand.
+This project built an automated ingestion and transformation pipeline that pulls Employee Data, Finance Data and ERP System (daily) into a Microsoft Fabric Lakehouse. Notebooks process and join these sources to calculate weighted KPI scores per employee per month, which are then surfaced in a Power BI dashboard with role and month filters.
 
-The result is a unified marketing intelligence platform covering the period Nov 2025–Mar 2026, tracking 7,574 site sessions, 6,456 Instagram followers, 286,667 Pinterest views, and 239 qualified leads — with full visibility into audience demographics, geographic reach, and content performance across all channels.
+The January 2026 snapshot shows a Manager-level Total Result YTD giving C level immediate clarity on where performance is strong and where it needs attention.
 
 ---
 
@@ -24,22 +24,22 @@ The result is a unified marketing intelligence platform covering the period Nov 
 
 ## 🛠️ Tech Stack
 
-- **Microsoft Fabric (OneLake + Lakehouse)** — unified Bronze/Silver/Gold storage with no data movement between services; all layers live in one logical lake
-- **Fabric Pipelines & Dataflows** — low-code ingestion of CSV platform exports and SharePoint form submissions
-- **PySpark Notebooks** — data quality scoring (accuracy %, completeness), text normalisation, and transformation logic
-- **Power BI Semantic Model** — centralised metric definitions with row-level security and both import and DirectQuery modes
-- **Power BI Desktop** — 6-page interactive dashboard (Website, Leads, Instagram, Pinterest, YouTube, LinkedIn)
-- **Microsoft Purview** — data governance and lineage tracking across the pipeline
+- **Microsoft Fabric Pipeline / Dataflow** — automates ingestion of Excel and ERP files into the Lakehouse on defined schedules
+- **Databricks Notebooks** — handles data transformation, KPI weight application, and fact table generation
+- **Microsoft Fabric Lakehouse / OneLake** — unified Delta storage layer for raw, transformed, and master KPI data
+- **Azure AD** — identity and access management across the platform
 - **Azure Key Vault** — secure credential and secret management
-- **Azure Monitor** — pipeline health monitoring and alerting
+- **Microsoft Purview** — data discovery and governance
+- **Azure Monitor** — platform monitoring and cost management
+- **Power BI** — interactive KPI scorecard with position and month slicers, gauge charts for each KPI, and color-coded performance bands (Fail / Average / Good / Excellent)
 
 ---
 
 ## 📊 Dashboard & Key Metrics
 
-The Power BI dashboard serves managers and employees who need a consolidated view of cross-channel performance. Each of the 6 pages is dedicated to one channel, with a shared date slicer (Nov 2025–Mar 2026) and brand filter. Stakeholders can track how audience demographics, geographic reach, and engagement evolve month over month — and compare lead quality against the traffic sources driving site visits.
+The dashboard is used by HR managers and department heads to evaluate monthly KPI performance at the individual and role level. Each KPI card shows the fiscal year target, actual YTD value, result percentage, and KPI weight — making it easy to identify which metrics are dragging down an employee's overall score and to track month-over-month improvement.
 
-[View the full dashboard PDF](https://github.com/Dechannie689/Marketing-Analysis/blob/main/WEBSITE_LEADS_REPORT.pdf)
+[View the full dashboard PDF](https://github.com/Dechannie689/KPI-TRACKING-SYSTEM/blob/main/KPI_DASHBOARD.pdf)
 
 ---
 
